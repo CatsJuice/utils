@@ -34,3 +34,18 @@ export function lerp(min: number, max: number, t: number) {
   const interpolation = clamp(t, 0.0, 1.0)
   return min + (max - min) * interpolation
 }
+
+/**
+ * 生成指定区间内的随机整数
+ * @param start
+ * @param end
+ * @return {number} 随机整数
+ */
+export function randomInt(
+  /** 最小值 */
+  start = 0,
+  /** 最大值 */
+  end = 100,
+) {
+  return Math.ceil(Math.random() * (end - start) + start)
+}
