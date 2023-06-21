@@ -1,5 +1,6 @@
 export * from './p'
 export * from './is'
+export * from './url'
 export * from './math'
 export * from './type'
 export * from './base'
