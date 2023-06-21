@@ -1,6 +1,1 @@
-export {
-  throttle,
-  debounce,
-  cloneDeep,
-  merge,
-} from 'lodash'
+export { throttle, debounce } from 'throttle-debounce'

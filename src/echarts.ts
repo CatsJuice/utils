@@ -1,5 +1,5 @@
-import merge from 'lodash/merge'
-import cloneDeep from 'lodash/cloneDeep'
+import cloneDeep from 'lodash-es/cloneDeep'
+import merge from 'lodash-es/merge'
 
 import type { EChartsOption } from './types/echarts'
 import { getArrayableFirst } from './echarts/arrayable-first'
