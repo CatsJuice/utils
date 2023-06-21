@@ -8,6 +8,17 @@
     "strict": true,
     "strictNullChecks": true,
     "resolveJsonModule": true,
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+    "outDir": ".temp",
+    "declarationDir": "types",
+    "declaration": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/*.ts"
+  ],
+  "exclude": [
+    "scripts",
+    "**/*/*.test.ts"
+  ]
 }

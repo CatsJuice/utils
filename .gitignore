@@ -80,3 +80,11 @@ dist
 # IDE
 .idea
 *.d.ts
+# !types/**/*.d.ts
+
+# Mac
+.DS_Store
+
+# temp
+temp
+.temp

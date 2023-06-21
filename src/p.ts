@@ -44,7 +44,7 @@ class PInstance<T = any> extends Promise<Awaited<T>[]> {
     return new PInstance(
       Array.from(this.items)
         .map(async (i, idx) => {
-          const v = await i
+          const v = (await i) as any
           if (v === VOID) return VOID as unknown as U
           return fn(v, idx)
         }),
