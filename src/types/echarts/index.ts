@@ -35,4 +35,35 @@ export interface EChartsBaseOption {
   yAxis?: Arrayable<EChartsAxis>
   legend?: Arrayable<EChartsLegend>
   series?: Arrayable<EChartsSeries>
+  grid?: Arrayable<any>
+  polar?: Arrayable<any>
+  radiusAxis?: Arrayable<any>
+  angleAxis?: Arrayable<any>
+  radar?: Arrayable<any>
+  dataZoom?: Arrayable<any>
+  visualMap?: Arrayable<any>
+  tooltip?: Arrayable<any>
+  axisPointer?: Arrayable<any>
+  toolbox?: Arrayable<any>
+  brush?: Arrayable<any>
+  geo?: Arrayable<any>
+  parallel?: Arrayable<any>
+  parallelAxis?: Arrayable<any>
+  singleAxis?: Arrayable<any>
+  timeline?: Arrayable<any>
+  graphic?: Arrayable<any>
+  calendar?: Arrayable<any>
+  dataset?: Arrayable<any>
+  aria?: Arrayable<any>
+  textStyle?: Arrayable<any>
+  stateAnimation?: any
+
+  // 3d
+  globe?: Arrayable<any>
+  geo3D?: Arrayable<any>
+  mapbox3D?: Arrayable<any>
+  grid3D?: Arrayable<any>
+  xAxis3D?: Arrayable<any>
+  yAxis3D?: Arrayable<any>
+  zAxis3D?: Arrayable<any>
 }

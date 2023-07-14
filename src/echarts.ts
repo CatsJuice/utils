@@ -1,7 +1,7 @@
 import cloneDeep from 'lodash-es/cloneDeep'
 import merge from 'lodash-es/merge'
 
-import type { EChartsOption } from './types/echarts'
+import type { EChartsBaseOption, EChartsOption } from './types/echarts'
 import { getArrayableFirst } from './echarts/arrayable-first'
 
 /**
@@ -9,6 +9,12 @@ import { getArrayableFirst } from './echarts/arrayable-first'
  */
 export class ECProcessor<T extends EChartsOption = EChartsOption> {
   constructor(public chartOptions: T) {}
+
+  public initKey(key: keyof EChartsBaseOption, value: any = []) {
+    if (!(key in this.chartOptions) || this.chartOptions[key] === undefined)
+      this.chartOptions[key] = value
+    return this
+  }
 
   /** 分割值坐标 */
   public splitValueAxis(opt?: {
@@ -72,22 +78,22 @@ export class ECProcessor<T extends EChartsOption = EChartsOption> {
   }
 
   /** 输出当前的配置 */
-  log() {
+  public log() {
     // eslint-disable-next-line no-console
     console.log(cloneDeep(this.chartOptions))
     return this
   }
 
   /** 输出当前配置项的 json */
-  json() {
+  public json() {
     // eslint-disable-next-line no-console
     console.log(JSON.stringify(this.chartOptions))
     return this
   }
 
   /** 获取一个新的实例，为当前状态的一个复制 */
-  clone() { return new ECProcessor(cloneDeep(this.chartOptions)) }
+  public clone() { return new ECProcessor(cloneDeep(this.chartOptions)) }
 
   /** 获取最终的配置 */
-  get() { return this.chartOptions }
+  public get() { return this.chartOptions }
 }
