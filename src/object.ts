@@ -62,6 +62,16 @@ export function objectPick<O extends object, T extends keyof O>(obj: O, keys: T[
 }
 
 /**
+ * Create a new subset object by omitting keys
+ * @param obj
+ * @param keys
+ * @returns
+ */
+export function objectOmit<O extends object, T extends keyof O>(obj: O, keys: T[]) {
+  return objectPick(obj, objectKeys(obj).filter(k => !keys.includes(k as T)) as any) as Omit<O, T>
+}
+
+/**
  * Create a promise lock
  *
  * @category Promise
